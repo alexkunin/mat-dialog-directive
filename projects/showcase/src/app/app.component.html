@@ -1,0 +1,17 @@
+<!--<label>-->
+<!--  <input type="checkbox" #open (change)="0"> Open-->
+<!--</label>-->
+
+<!--<div *ngIf="open.checked">-->
+  <div *libMatDialog="
+    let data is { a: 1 }
+    triggeredBy btn
+    configFrom { width: '500px', height: '400px' };
+    dialogRef as ref"
+  >
+    123
+    <button (click)="onClick(data, ref)">close</button>
+  </div>
+
+  <button #btn>open</button>
+<!--</div>-->
